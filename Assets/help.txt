@@ -1,0 +1,7 @@
+To move the player, you guessed it, use the <color=black>LEFT</color> and <color=black>RIGHT</color> arrow keys. You may also use <color=black>A</color> and <color=black>D</color> keys.
+
+For Jumping, use the <color=black>UP</color> arrow key (again <color=black>W</color> key works as well). Logically Crouching should be done using the <color=black>DOWN</color> arrow key (also <color=black>S</color> key).
+
+Using the <color=black>Z</color> key, you can control the zoom level of the camera among three different levels, Close, Mid and Far (go ahead and try it out).
+
+Good News, we support Gamepad too, with the <color=black>LEFT STICK</color> controlling left/right movement, <color=black>NORTH BUTTON</color> and <color=black>SOUTH BUTTON</color> for jumping and crouching respectively, and <color=black>LEFT SHOULDER</color> for the camera zoom level.
