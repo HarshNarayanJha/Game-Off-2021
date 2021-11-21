@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 1055268165}
   - component: {fileID: 1055268167}
   - component: {fileID: 1055268166}
+  - component: {fileID: 1198759137159418981}
   m_Layer: 0
   m_Name: VCamZoomMid
   m_TagString: Untagged
@@ -170,6 +171,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a8a05de0ac134f4f9d01bef6b9da077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1198759137159418981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055268164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ApplyAfter: 2
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 0
 --- !u!1 &1099536517
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,6 +198,7 @@ GameObject:
   - component: {fileID: 1099536518}
   - component: {fileID: 1099536521}
   - component: {fileID: 1099536520}
+  - component: {fileID: 4811310308653365043}
   m_Layer: 0
   m_Name: VCamZoomIn
   m_TagString: Untagged
@@ -225,7 +243,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 7
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -253,6 +271,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a8a05de0ac134f4f9d01bef6b9da077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4811310308653365043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099536517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ApplyAfter: 2
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 0
 --- !u!1 &1338004041
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +385,7 @@ GameObject:
   - component: {fileID: 7785071664801575274}
   - component: {fileID: 7785071664801575273}
   - component: {fileID: 7785071664801575276}
+  - component: {fileID: 8326713988369323845}
   m_Layer: 0
   m_Name: VCamZoomOut
   m_TagString: Untagged
@@ -402,7 +437,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7775656, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -423,6 +458,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a8a05de0ac134f4f9d01bef6b9da077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8326713988369323845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785071664801575272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ApplyAfter: 2
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 0
 --- !u!1 &7785071666050807978
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +526,7 @@ MonoBehaviour:
   vCameraIn: {fileID: 1099536521}
   firstInputSignal: {fileID: 11400000, guid: 3c433af8952437848b00aeabddfee8f8, type: 2}
   restartLevelSignal: {fileID: 11400000, guid: e8e7b0c26d7fdff4aa37044320fa89c2, type: 2}
+  camStateSignal: {fileID: 11400000, guid: 9d588111c6b405a4c8ed3c911e08571b, type: 2}
   inputReader: {fileID: 11400000, guid: 1c9b6d8a748f2ff42983bbbdf19cacdb, type: 2}
 --- !u!1 &7785071666163321474
 GameObject:

@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
 
     Vector3 initialPosition;
+    Vector3 lastCheckpointPosition;
     Vector3 lastGroundedPosition;
     float moveInput;
     Vector2 velocity;
@@ -58,6 +59,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
 
         initialPosition = transform.position;
+        lastCheckpointPosition = initialPosition;
         
         fadeOutSignal.RaiseSignal();
         inputReader.EnablePlayerInput();
@@ -190,7 +192,7 @@ public class PlayerController : MonoBehaviour
         if (!firstInputRaised)
         {
             firstInputSignal.RaiseSignal();
-            Debug.Log("PlayerController: First Input Signal Raised", gameObject);
+            //Debug.Log("PlayerController: First Input Signal Raised", gameObject);
             firstInputRaised = true;
         }
 
@@ -228,7 +230,7 @@ public class PlayerController : MonoBehaviour
 
     private void ResetPosition()
     {
-        transform.position = initialPosition;
+        transform.position = lastCheckpointPosition;
         // transform.position = lastGroundedPosition;
         spriteRenderer.flipX = false;
     }
@@ -253,10 +255,26 @@ public class PlayerController : MonoBehaviour
 
     private void RestartLevel()
     {
+        animator.SetBool("isMoving", false);
+        animator.SetBool("isGrounded", false);
+        animator.SetBool("isCrouching", false);
+        animator.SetBool("killed", false);
+        
         ResetVelocity();
         EnableColliders();
         ResetPosition();
 
         firstInputRaised = false;
+    }
+
+    public void SetLastCheckpoint(Vector3 checkpoint)
+    {
+        lastCheckpointPosition = checkpoint;
+    }
+
+    public void Kill()
+    {
+        animator.SetBool("killed", true);
+        ResetVelocity();
     }
 }

@@ -137,7 +137,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1301315001
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: d1dc2d2c9fdc29145b749e68ee379ff2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -238,6 +238,7 @@ MonoBehaviour:
   ceilingCheck: {fileID: 1721020090522706116}
   isJumping: 0
   isCrouching: 0
+  levelNotifierAnimator: {fileID: 0}
   inputReader: {fileID: 11400000, guid: 1c9b6d8a748f2ff42983bbbdf19cacdb, type: 2}
   scoreValue: {fileID: 11400000, guid: 3e878e4a9c8155e499ce23ada17a9676, type: 2}
   firstInputSignal: {fileID: 11400000, guid: 3c433af8952437848b00aeabddfee8f8, type: 2}

@@ -36,6 +36,7 @@ public class MainMenu : MonoBehaviour
         playerScore.LoadValueFromSave();
         
         playerScoreText.SetText(PadScore(playerScore.Value));
+        Application.targetFrameRate = 30;
     }
 
     private void SpacePressed()

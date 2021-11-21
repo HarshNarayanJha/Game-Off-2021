@@ -24,6 +24,7 @@ public class CameraController : MonoBehaviour
     [Header("Signals Listening On")]
     [SerializeField] private VoidSignalSO firstInputSignal; 
     [SerializeField] private VoidSignalSO restartLevelSignal; 
+    [SerializeField] private CamSignalSO camStateSignal;
 
     [Header("Input")]
     [SerializeField] private InputReader inputReader;
@@ -33,6 +34,7 @@ public class CameraController : MonoBehaviour
         inputReader.zoomEvent += Zoom;
         firstInputSignal.OnSignalRaised += FirstInput;
         restartLevelSignal.OnSignalRaised += RestartLevel;
+        camStateSignal.OnSignalRaised += SetCamState;
     }
 
     private void OnDisable()
@@ -40,27 +42,19 @@ public class CameraController : MonoBehaviour
         inputReader.zoomEvent -= Zoom;
         firstInputSignal.OnSignalRaised -= FirstInput;
         restartLevelSignal.OnSignalRaised -= RestartLevel;
+        camStateSignal.OnSignalRaised -= SetCamState;
     }
 
     public void FirstInput()
     {
-        //animator.SetTrigger("FirstInputRecieved");
         firstInputRecieved = true;
-        //isZoomedOut = false;
-        previousZoomState = cameraZoomState;
-        cameraZoomState = CameraZoomState.In;
-        UpdateCamera();
+        SetCamState(CameraZoomState.In);
     }
 
     public void RestartLevel()
     {
         firstInputRecieved = false;
-        previousZoomState = cameraZoomState;
-        cameraZoomState = CameraZoomState.Out;
-        UpdateCamera();
-        //isZoomedOut = false;
-        //animator.SetBool("isZoomedOut", false);
-        //animator.SetTrigger("LevelRestart");
+        SetCamState(CameraZoomState.Out);
     }
 
     public void Zoom()
@@ -68,8 +62,6 @@ public class CameraController : MonoBehaviour
         //Debug.Log("Zoom Called");
         if (firstInputRecieved)
         {
-            //isZoomedOut = !isZoomedOut;
-            //animator.SetBool("isZoomedOut", isZoomedOut);
             if (cameraZoomState == CameraZoomState.In)
             {
                 previousZoomState = CameraZoomState.In;
@@ -125,18 +117,10 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    // private IEnumerator ResizeCamera()
-    // {
-    //     float elapsed = 0f;
-
-    //     while (elapsed <= zoomNormalDuration)
-    //     {
-    //          float t = Mathf.Clamp01(elapsed / zoomNormalDuration);
-    //          vCamera.m_Lens.OrthographicSize = Mathf.Lerp(zoomSizeOut, zoomSizeNormal, t);
-
-    //          elapsed += Time.deltaTime;
-    //     }
-
-    //     yield return null;
-    // }
+    private void SetCamState(CameraController.CameraZoomState state)
+    {
+        previousZoomState = cameraZoomState;
+        cameraZoomState = state;
+        UpdateCamera();
+    }
 }
