@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7523813791956710618}
   - component: {fileID: 7523813791956710613}
   - component: {fileID: 7523813791956710612}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876fa03a2cb8f90498d72d950a554efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1
   fadeInSignal: {fileID: 11400000, guid: f7405125bb1db104db14b7de5dccf87e, type: 2}
   fadeOutSignal: {fileID: 11400000, guid: f3de4d1220c93b944bbfab53bb9b6625, type: 2}
   restartLevelSignal: {fileID: 11400000, guid: e8e7b0c26d7fdff4aa37044320fa89c2, type: 2}

@@ -47,8 +47,9 @@ MonoBehaviour:
   fadeInSignal: {fileID: 11400000, guid: f7405125bb1db104db14b7de5dccf87e, type: 2}
   fadeOutSignal: {fileID: 11400000, guid: f3de4d1220c93b944bbfab53bb9b6625, type: 2}
   pressStartAnimator: {fileID: 0}
-  level1: {fileID: 11400000, guid: 84a87c955a9bd61459ff4ff295c36393, type: 2}
+  level1: {fileID: 11400000, guid: b20a2f56fdfcc3d44b5270dcc4437431, type: 2}
   playerScore: {fileID: 11400000, guid: 3e878e4a9c8155e499ce23ada17a9676, type: 2}
   playerScoreText: {fileID: 0}
   mainMenuObject: {fileID: 0}
   optionsMenuObject: {fileID: 0}
+  helpMenuObject: {fileID: 0}

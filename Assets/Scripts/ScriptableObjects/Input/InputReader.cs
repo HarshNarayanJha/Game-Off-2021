@@ -57,7 +57,8 @@ public class InputReader : ScriptableObject, GameInput.IGameplayActions
 
     public void OnSpace(InputAction.CallbackContext context)
     {
-        spaceEvent.Invoke();
+        if (context.phase == InputActionPhase.Performed)
+            spaceEvent.Invoke();
     }
     
     public void OnCrouch(InputAction.CallbackContext context)

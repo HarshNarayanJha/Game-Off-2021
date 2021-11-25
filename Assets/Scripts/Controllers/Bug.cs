@@ -5,6 +5,8 @@ using Cinemachine;
 
 public class Bug : MonoBehaviour
 {
+    [SerializeField] private float health;
+
     [Header("Signals Broadcasting On")]
     [SerializeField] private VoidSignalSO fadeInSignal;
     [SerializeField] private VoidSignalSO fadeOutSignal;
@@ -32,6 +34,23 @@ public class Bug : MonoBehaviour
 
             StartCoroutine(RestartLevel());
         }
+    }
+
+    public void Damage(float amount)
+    {
+        if ((health - amount) < 0)
+            health = 0;
+        else
+            health -= amount;
+
+        if (health == 0)
+            Kill();
+    }
+
+    private void Kill()
+    {
+        Debug.Log(gameObject.name + " Was Killed by you");
+        gameObject.SetActive(false);
     }
 
     private IEnumerator RestartLevel()

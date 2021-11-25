@@ -1324,6 +1324,7 @@ MonoBehaviour:
   startDelay: 1
   pauseTime: 3
   camSignal: {fileID: 11400000, guid: 9d588111c6b405a4c8ed3c911e08571b, type: 2}
+  restartLevelSignal: {fileID: 11400000, guid: e8e7b0c26d7fdff4aa37044320fa89c2, type: 2}
   startMoving: 0
   rigidBody: {fileID: 483865157}
 --- !u!61 &483865156
@@ -1766,7 +1767,7 @@ GameObject:
   - component: {fileID: 683384561}
   - component: {fileID: 683384562}
   m_Layer: 0
-  m_Name: Alpha Notice
+  m_Name: Beta Notice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2063,7 +2064,7 @@ Transform:
   m_Children:
   - {fileID: 1544679461}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &783416407
 PrefabInstance:
@@ -5149,11 +5150,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8468162105026347962, guid: c5ea6a27e3895634784fc5cb0e18723e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8763047126891117014, guid: c5ea6a27e3895634784fc5cb0e18723e,
         type: 3}
       propertyPath: m_IsActive
@@ -5673,7 +5669,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Level 4 is yet to be made... \nThanks to you Alpha Testers\nPlese provide
+  m_text: "Level 4 is yet to be made... \nThanks to you Beta Testers\nPlease provide
     your Valuable Suggestions to Me. Thanks."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4422fd8cf2666b84386346b5283ad2a7, type: 2}
@@ -5821,7 +5817,7 @@ Transform:
   - {fileID: 1665072007}
   - {fileID: 683384561}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2062306721
 PrefabInstance:
@@ -6688,7 +6684,7 @@ PrefabInstance:
     - target: {fileID: 7785071664801575274, guid: a7d85a2845ffe104cacc87920a015766,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.17573166
+      value: 0.16809082
       objectReference: {fileID: 0}
     - target: {fileID: 7785071664801575274, guid: a7d85a2845ffe104cacc87920a015766,
         type: 3}
@@ -6763,7 +6759,7 @@ PrefabInstance:
     - target: {fileID: 7785071666314213676, guid: a7d85a2845ffe104cacc87920a015766,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.17573166
+      value: 0.16809082
       objectReference: {fileID: 0}
     - target: {fileID: 7785071666314213676, guid: a7d85a2845ffe104cacc87920a015766,
         type: 3}

@@ -13,6 +13,9 @@ public class MovingPlatform : MonoBehaviour
     [Header("Signals Broadcasting On")]
     [SerializeField] private CamSignalSO camSignal;
 
+    [Header("Signals Listening On")]
+    [SerializeField] private VoidSignalSO restartLevelSignal;
+
     [Header("Others")]
     [SerializeField] bool startMoving;
     [SerializeField] private Rigidbody2D rigidBody;
@@ -20,9 +23,20 @@ public class MovingPlatform : MonoBehaviour
     Vector2 position;
     int currentNode;
 
+    private void OnEnable()
+    {
+        restartLevelSignal.OnSignalRaised += LevelRestarted;
+    }
+
+    private void OnDisable()
+    {
+        restartLevelSignal.OnSignalRaised -= LevelRestarted;
+    }
+
     private void Start()
     {
         currentTargetPosition = pathNodes[currentNode].position;
+        rigidBody.position = currentTargetPosition;
 
         position.x = rigidBody.position.x;
         position.y = rigidBody.position.y;
@@ -68,11 +82,23 @@ public class MovingPlatform : MonoBehaviour
     private void CheckNode()
     {
         currentTargetPosition = pathNodes[currentNode].position;
-        Invoke("SetStartMoving", pauseTime);
+        if (currentNode == 1)
+            Invoke("SetStartMoving", 0f);
+        else
+            Invoke("SetStartMoving", pauseTime);
     }
 
     private void SetStartMoving()
     {
         startMoving = true;
+    }
+
+    private void LevelRestarted()
+    {
+        startMoving = false;
+        currentNode = 0;
+        currentTargetPosition = pathNodes[currentNode].position;
+        position = currentTargetPosition;
+        rigidBody.position = position;
     }
 }

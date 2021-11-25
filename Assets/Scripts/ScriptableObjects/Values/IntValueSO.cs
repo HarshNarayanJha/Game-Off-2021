@@ -19,7 +19,6 @@ public class IntValueSO : ValuesBaseSO
         value = val;
     }
 
-
     public void Increment(int val)
     {
         value += val;

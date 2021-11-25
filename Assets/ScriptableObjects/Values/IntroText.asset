@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f58ecfc4226fd4687cc4d1b687c76f, type: 3}
+  m_Name: IntroText
+  m_EditorClassIdentifier: 
+  description: The text for the intro of the game
+  value: "This is the Land of Monochromes. Here, everything is monochromatic, from
+    people to roads to platforms, everything. Despite this, every one is happy living
+    here, or better to say, <i>was</i> happy living here.\n\nRecently, a big army
+    of <color=green>bugs</color> (you guessed it, they are also monochromatic) attacked
+    this Land. They spreaded to all sorts of places. \n\nNow, this Land needs a <color=blue>Hero
+    Of The Legend</color> to save this Land from those (monocromatic) bugs.\n\nPress
+    <color=blue>Space</color> To Begin...."
