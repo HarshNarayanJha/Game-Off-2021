@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool isJumping;
     [SerializeField] private bool isCrouching;
     [SerializeField] private Animator levelNotifierAnimator;
+    [SerializeField] private PlayerAura playerAura;
 
     [Header("Input")]
     [SerializeField] private InputReader inputReader;
@@ -126,8 +127,11 @@ public class PlayerController : MonoBehaviour
 
             if (Physics2D.CircleCast(ceilingCheck.position, groundDistance, Vector2.up, groundDistance, groundMask).collider != null)
             {
-                isCrouching = true;
-                animator.SetBool("isCrouching", isCrouching);
+                if (!playerAura.IsAuraActive)
+                {
+                    isCrouching = true;
+                    animator.SetBool("isCrouching", isCrouching);
+                }
             }
 
             // Jump only while not crouching
@@ -203,7 +207,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnJump()
     {
-        isJumping = true;
+        if (!playerAura.IsAuraActive)
+            isJumping = true;
     }
 
     private void OnJumpCancel()
@@ -213,14 +218,20 @@ public class PlayerController : MonoBehaviour
 
     private void OnCrouch()
     {
-        isCrouching = true;
-        animator.SetBool("isCrouching", isCrouching);
+        if (!playerAura.IsAuraActive)
+        {
+            isCrouching = true;
+            animator.SetBool("isCrouching", isCrouching);
+        }
     }
 
     private void OnCrouchCancel()
     {
-        isCrouching = false;
-        animator.SetBool("isCrouching", isCrouching);
+        if (!playerAura.IsAuraActive)
+        {
+            isCrouching = false;
+            animator.SetBool("isCrouching", isCrouching);
+        }
     }
 
     private void CoinCollected(int points)

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6017553075820838202}
   - component: {fileID: 5727733776959467365}
   - component: {fileID: 5727733776959467363}
-  - component: {fileID: 1508539025572328414}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -27,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5727733776959467364}
-  m_LocalRotation: {x: 0, y: 0.42261827, z: 0, w: 0.9063079}
+  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 140.59, y: 0.13, z: -7.57}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.9122356, y: 2.7097006, z: 2.7097006}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 50, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
 --- !u!212 &6017553075820838202
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -53,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5dca1abad96783245ad696a1cfcb07aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,7 +97,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.4876573}
+  m_Offset: {x: 0.062137485, y: -0.35519853}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -109,7 +108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 6.0246854}
+  m_Size: {x: 1.0589879, y: 2.3442643}
   m_EdgeRadius: 0
 --- !u!114 &5727733776959467363
 MonoBehaviour:
@@ -124,25 +123,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 0}
+  loadMenu: 0
+  menu: {fileID: 0}
   fadeInSignal: {fileID: 11400000, guid: f7405125bb1db104db14b7de5dccf87e, type: 2}
   inputReader: {fileID: 11400000, guid: 1c9b6d8a748f2ff42983bbbdf19cacdb, type: 2}
   playerScore: {fileID: 11400000, guid: 3e878e4a9c8155e499ce23ada17a9676, type: 2}
---- !u!95 &1508539025572328414
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5727733776959467364}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ebe30db017102d44abc949d4c62c4a42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  globalVolume: {fileID: 0}

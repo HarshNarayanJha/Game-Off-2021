@@ -1,7 +1,9 @@
-To move the player, you guessed it, use the <color=black>LEFT</color> and <color=black>RIGHT</color> arrow keys. You may also use <color=black>A</color> and <color=black>D</color> keys.
+To <color=blue>Move</color>, you guessed it, use the <color=black>LEFT</color> and <color=black>RIGHT</color> arrow keys. You may also use <color=black>A</color> and <color=black>D</color> keys.
 
-For Jumping, use the <color=black>UP</color> arrow key (again <color=black>W</color> key works as well). Logically Crouching should be done using the <color=black>DOWN</color> arrow key (also <color=black>S</color> key).
+To <color=blue>Jump</color>, use the <color=black>UP</color> arrow key (again <color=black>W</color> key works as well). Logically Crouching should be done using the <color=black>DOWN</color> arrow key (also <color=black>S</color> key). Also, <color=blue>Crouching</color> in mid-air will allow you to <color=blue>fall down in-place</color>.
 
-Using the <color=black>Z</color> key, you can control the zoom level of the camera among three different levels, Close, Mid and Far (go ahead and try it out).
+Using the <color=black>Z</color> key, you can control the <color=blue>Zoom Level</color> of the camera among three different levels, Close, Mid and Far (go ahead and try it out).
 
-Good News, we support Gamepad too, with the <color=black>LEFT STICK</color> controlling left/right movement, <color=black>NORTH BUTTON</color> and <color=black>SOUTH BUTTON</color> for jumping and crouching respectively, and <color=black>LEFT SHOULDER</color> for the camera zoom level.
+Then with the <color=black>SPACEBAR</color> key, you can release an <color=blue>Aura</color> which will kill your enemies. Beware that you can't jump or crouch or collect coins which your <color=blue>Aura</color> is being released. 
+
+Good News, we support Gamepad too, with the <color=black>LEFT STICK</color> controlling <color=blue>Movement</color>, <color=black>NORTH BUTTON</color> and <color=black>SOUTH BUTTON</color> for <color=blue>Jumping</color> and <color=blue>Crouching</color> respectively, <color=black>LEFT SHOULDER</color> for the <color=blue>Camera Zoom Level</color>, and <color=black>RIGHT SHOULDER</color> for the <color=blue>Aura</color>.

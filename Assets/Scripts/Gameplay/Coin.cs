@@ -9,6 +9,9 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            if (other.GetComponent<PlayerAura>().IsAuraActive)
+                return;
+                
             GetComponent<CircleCollider2D>().enabled = false;
             coinCollectedSignal.RaiseSignal(points);
             gameObject.SetActive(false);

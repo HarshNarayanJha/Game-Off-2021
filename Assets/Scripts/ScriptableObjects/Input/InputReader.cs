@@ -13,6 +13,7 @@ public class InputReader : ScriptableObject, GameInput.IGameplayActions
     public event UnityAction jumpEvent = delegate { };
     public event UnityAction jumpCanceledEvent = delegate { };
     public event UnityAction spaceEvent = delegate { };
+    public event UnityAction spaceCanceledEvent = delegate { };
     public event UnityAction crouchEvent = delegate { };
     public event UnityAction crouchCanceledEvent = delegate { };
     public event UnityAction zoomEvent = delegate { };
@@ -57,8 +58,15 @@ public class InputReader : ScriptableObject, GameInput.IGameplayActions
 
     public void OnSpace(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Performed)
-            spaceEvent.Invoke();
+        switch (context.phase)
+        {
+            case InputActionPhase.Performed:
+                spaceEvent.Invoke();
+                break;
+            case InputActionPhase.Canceled:
+                spaceCanceledEvent.Invoke();
+                break;
+        }
     }
     
     public void OnCrouch(InputAction.CallbackContext context)

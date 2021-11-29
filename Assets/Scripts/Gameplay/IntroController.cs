@@ -72,5 +72,8 @@ public class IntroController : MonoBehaviour
         player.SetActive(true);
         
         inputReader.EnablePlayerInput();
+
+        this.gameObject.SetActive(false);
+        this.enabled = false;
     }
 }

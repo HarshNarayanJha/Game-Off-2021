@@ -22,7 +22,7 @@ public class ScoreController : MonoBehaviour
 
     private void Start()
     {
-        stringBuilder = new StringBuilder("000");
+        stringBuilder = new StringBuilder("00");
         UpdateScore(0);
     }
 
@@ -40,17 +40,14 @@ public class ScoreController : MonoBehaviour
     {
         stringBuilder.Clear();
         
-        if (currentScore + score > 999)
-            currentScore = 999;
+        if (currentScore + score > 99)
+            currentScore = 99;
         else
             currentScore += score;
         
-        if (currentScore < 100)
+        if (currentScore < 10)
         {
-            if (currentScore > 10)
-                stringBuilder.Append("0");
-            else
-                stringBuilder.Append("00");
+            stringBuilder.Append("0");
         }
 
         stringBuilder.Append(currentScore);

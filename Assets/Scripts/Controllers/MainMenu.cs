@@ -7,6 +7,8 @@ using System.Text;
 
 public class MainMenu : MonoBehaviour
 {
+    public enum MainMenuScreens { Main, Options, Help };
+
     [SerializeField] private InputReader inputReader;
     [SerializeField] private VoidSignalSO fadeInSignal;
     [SerializeField] private VoidSignalSO fadeOutSignal;
@@ -18,6 +20,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject mainMenuObject;
     [SerializeField] private GameObject optionsMenuObject;
     [SerializeField] private GameObject helpMenuObject;
+
+    private MainMenuScreens currentScreen;
 
 
     private void OnEnable()
@@ -34,14 +38,18 @@ public class MainMenu : MonoBehaviour
     {
         fadeOutSignal.RaiseSignal();
         playerScore.LoadValueFromSave();
+        inputReader.EnablePlayerInput();
         
         playerScoreText.SetText(PadScore(playerScore.Value));
         Application.targetFrameRate = 30;
+
+        currentScreen = MainMenuScreens.Main;
     }
 
     private void SpacePressed()
     {
-        StartCoroutine(GoToOptionsMenu());
+        if (currentScreen == MainMenuScreens.Main)
+            StartCoroutine(GoToOptionsMenu());
     }
 
     private IEnumerator GoToOptionsMenu()
@@ -55,6 +63,7 @@ public class MainMenu : MonoBehaviour
         optionsMenuObject.SetActive(true);
 
         fadeOutSignal.RaiseSignal();
+        currentScreen = MainMenuScreens.Options;
         yield return new WaitForSeconds(1f);
     }
 
@@ -67,6 +76,7 @@ public class MainMenu : MonoBehaviour
         helpMenuObject.SetActive(true);
 
         fadeOutSignal.RaiseSignal();
+        currentScreen = MainMenuScreens.Help;
         yield return new WaitForSeconds(1f);
     }
 
@@ -79,6 +89,7 @@ public class MainMenu : MonoBehaviour
         optionsMenuObject.SetActive(true);
 
         fadeOutSignal.RaiseSignal();
+        currentScreen = MainMenuScreens.Options;
         yield return new WaitForSeconds(1f);
     }
 

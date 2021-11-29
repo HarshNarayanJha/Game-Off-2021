@@ -19,13 +19,26 @@ public class Bug : MonoBehaviour
     [SerializeField] private CinemachineImpulseSource impulseSource;
     private BoxCollider2D boxCollider;
 
+    private MaterialPropertyBlock materialPropertyBlock;
+    private SpriteRenderer spriteRenderer;
+    private bool isDissolving;
+    private float fade;
+
     private void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();    
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        materialPropertyBlock = new MaterialPropertyBlock();
+
+        isDissolving = false;
+        fade = 1;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        if (isDissolving)
+            return;
+            
         if (other.gameObject.CompareTag("Player"))
         {
             inputReader.DisablePlayerInput();
@@ -47,10 +60,29 @@ public class Bug : MonoBehaviour
             Kill();
     }
 
+    private void Update()
+    {
+        if (isDissolving)
+        {
+            spriteRenderer.GetPropertyBlock(materialPropertyBlock);
+            fade -= Time.deltaTime * 2f;
+             if (fade <= 0f)
+             {
+                fade = 0;
+                isDissolving = false;
+                gameObject.SetActive(false);
+             }
+
+            materialPropertyBlock.SetFloat("_Fade", fade);
+            spriteRenderer.SetPropertyBlock(materialPropertyBlock);
+        }
+    }
+
     private void Kill()
     {
-        Debug.Log(gameObject.name + " Was Killed by you");
-        gameObject.SetActive(false);
+        // Debug.Log(gameObject.name + " Was Killed by you");
+        isDissolving = true;
+        // gameObject.SetActive(false);
     }
 
     private IEnumerator RestartLevel()
