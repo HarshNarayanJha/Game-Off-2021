@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: The text for the intro of the game
   value: "This is the Land of Monochromes. Here, everything is monochromatic, from
-    people to roads to platforms, everything. Despite this, every one is happy living
-    here, or better to say, <i>was</i> happy living here.\n\nRecently, a big army
-    of <color=green>bugs</color> (you guessed it, they are also monochromatic) attacked
-    this Land. They spreaded to all sorts of places. \n\nNow, this Land needs a <color=blue>Hero
-    Of The Legend</color> to save this Land from those (monocromatic) bugs.\n\nPress
-    <color=blue>Space</color> To Begin...."
+    people to platforms to platforms, everything. Despite this, every one is happy
+    living here, or better to say, <i>was</i> happy living here.\n\nRecently, a big
+    army of <color=green>bugs</color> (you guessed it, they are also monochromatic)
+    attacked this Land. They spreaded to all sorts of places. \n\nNow, this Land
+    needs a <color=blue>Hero Of The Legend</color> to save this Land from those (monocromatic)
+    bugs.\n\nPress <color=blue>Space</color> To Begin...."

@@ -18,6 +18,9 @@ public class Bug : MonoBehaviour
     [Header("Others")]
     [SerializeField] private CinemachineImpulseSource impulseSource;
     private BoxCollider2D boxCollider;
+    [SerializeField] private bool isMiniBossBug = false;
+    [SerializeField] private bool isBossBug = false;
+    [SerializeField] private VoidSignalSO bossBugKilledSignal;
 
     private MaterialPropertyBlock materialPropertyBlock;
     private SpriteRenderer spriteRenderer;
@@ -43,7 +46,9 @@ public class Bug : MonoBehaviour
         {
             inputReader.DisablePlayerInput();
             other.gameObject.GetComponent<PlayerController>().Kill();
-            boxCollider.enabled = false;
+
+            if (!isMiniBossBug)
+                boxCollider.enabled = false;
 
             StartCoroutine(RestartLevel());
         }
@@ -58,6 +63,19 @@ public class Bug : MonoBehaviour
 
         if (health == 0)
             Kill();
+        else
+            StartCoroutine(TakeDamageEffect());
+    }
+
+    private IEnumerator TakeDamageEffect()
+    {
+        for (int i = 0; i < 7; i++)
+        {
+            spriteRenderer.enabled = i % 2 == 0;
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        spriteRenderer.enabled = true;
     }
 
     private void Update()
@@ -71,6 +89,9 @@ public class Bug : MonoBehaviour
                 fade = 0;
                 isDissolving = false;
                 gameObject.SetActive(false);
+
+                if (isBossBug)
+                    bossBugKilledSignal.RaiseSignal();
              }
 
             materialPropertyBlock.SetFloat("_Fade", fade);
@@ -78,7 +99,7 @@ public class Bug : MonoBehaviour
         }
     }
 
-    private void Kill()
+    public void Kill()
     {
         // Debug.Log(gameObject.name + " Was Killed by you");
         isDissolving = true;

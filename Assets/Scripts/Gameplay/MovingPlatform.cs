@@ -9,6 +9,7 @@ public class MovingPlatform : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float startDelay;
     [SerializeField] private float pauseTime;
+    [SerializeField] private CameraController.CameraZoomState targetCamState = CameraController.CameraZoomState.Mid;
 
     [Header("Signals Broadcasting On")]
     [SerializeField] private CamSignalSO camSignal;
@@ -47,7 +48,8 @@ public class MovingPlatform : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Invoke("SetStartMoving", startDelay);
-            camSignal.RaiseSignal(CameraController.CameraZoomState.Mid);
+            camSignal.RaiseSignal(targetCamState);
+            GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 
@@ -100,5 +102,7 @@ public class MovingPlatform : MonoBehaviour
         currentTargetPosition = pathNodes[currentNode].position;
         position = currentTargetPosition;
         rigidBody.position = position;
+
+        GetComponent<BoxCollider2D>().enabled = true;
     }
 }

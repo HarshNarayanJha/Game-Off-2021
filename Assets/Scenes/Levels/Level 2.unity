@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'See this shining <color=blue>Aura</color> ??
+  m_text: 'See this glowing <color=blue>Aura</color> ??
 
     Go through it and you
     will get something to aid you in your mission.'
@@ -508,17 +508,20 @@ EdgeCollider2D:
   - {x: 4.007221, y: 7.3729057}
   - {x: 5.392339, y: 8.028754}
   - {x: 6.4736624, y: 8.516529}
-  - {x: 7.185175, y: 8.772702}
-  - {x: 8.189454, y: 8.860035}
-  - {x: 9.512547, y: 8.886581}
-  - {x: 14.505974, y: 8.889723}
-  - {x: 15.987141, y: 8.917379}
-  - {x: 17.14618, y: 8.984948}
-  - {x: 18.205015, y: 9.019755}
-  - {x: 20.236282, y: 9.0420265}
-  - {x: 22.846874, y: 9.054141}
-  - {x: 28.258293, y: 9.05627}
-  - {x: 31.303642, y: 9.042017}
+  - {x: 7.096536, y: 8.749053}
+  - {x: 8.008618, y: 8.982021}
+  - {x: 9.40208, y: 9.394497}
+  - {x: 11.167524, y: 9.899956}
+  - {x: 13.098474, y: 10.382052}
+  - {x: 15.017791, y: 10.726614}
+  - {x: 16.805279, y: 10.800525}
+  - {x: 18.933195, y: 10.2534485}
+  - {x: 20.770977, y: 9.9954}
+  - {x: 23.241188, y: 9.722352}
+  - {x: 25.923576, y: 9.465715}
+  - {x: 28.428455, y: 9.250372}
+  - {x: 30.417288, y: 9.097726}
+  - {x: 31.331808, y: 9.041576}
   - {x: 32.484867, y: 9.0456085}
   - {x: 34.459496, y: 9.079771}
   - {x: 39.634033, y: 9.202385}
@@ -587,9 +590,9 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 17.194717, y: 7.9185324, z: 0}
-      leftTangent: {x: -2.1954575, y: -0.21653175, z: 0}
-      rightTangent: {x: 0.9597244, y: 0.09465599, z: 0}
+    - position: {x: 17.781464, y: 9.446054, z: 0}
+      leftTangent: {x: -1.8520126, y: 1.1987562, z: 0}
+      rightTangent: {x: 0.7828522, y: -0.5067196, z: 0}
       mode: 1
       height: 1
       bevelCutoff: 0
@@ -1426,6 +1429,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bug (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523813791956710622, guid: 1026ff42a96ec8744ac8b455225cfd74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1026ff42a96ec8744ac8b455225cfd74, type: 3}
@@ -3961,7 +3969,7 @@ SpriteRenderer:
   m_SortingLayerID: -1301315001
   m_SortingLayer: 2
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: d213ad28f32f49944ac86ab8d334337f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ab7cc6f518e77f45bacdaef92ea485c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3980,8 +3988,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258064144}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 122.74, y: 15.59, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: 124.92, y: 16.96, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13

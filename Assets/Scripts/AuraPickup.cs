@@ -8,12 +8,22 @@ public class AuraPickup : MonoBehaviour
     [SerializeField] private GameObject beforeAuraMessage;
     [SerializeField] private GameObject afterAuraMessage;
 
-    [Header("Signals Broadcasting On")]
     [SerializeField] private VoidSignalSO fadeInSignal;
     [SerializeField] private VoidSignalSO fadeOutSignal;
 
     [Header("Input")]
     [SerializeField] private InputReader inputReader;
+
+    bool fadeOutAura;
+    float fade;
+    Material mat;
+
+    private void Start()
+    {
+        fadeOutAura = false;
+        fade = 1f;
+        mat = GetComponent<SpriteRenderer>().material;
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,16 +31,38 @@ public class AuraPickup : MonoBehaviour
         {
             other.GetComponent<PlayerController>().ResetVelocity();
             inputReader.DisablePlayerInput();
-            fadeInSignal.RaiseSignal();
+            // fadeInSignal.RaiseSignal();
             StartCoroutine(GetAura());
+        }
+    }
+
+    private void Update()
+    {
+        if (fadeOutAura)
+        {
+            fade -= Time.deltaTime * 5f;
+
+            if (fade <= 0f)
+                fade = 0f;
+
+            mat.SetFloat("_Fade", fade);
+
+            if (fade == 0f)
+            {
+                fadeInSignal.RaiseSignal();
+                fadeOutAura = false;
+            }
         }
     }
 
     private IEnumerator GetAura()
     {
-        yield return new WaitForSeconds(0.5f);
+        fadeOutAura = true;
+        
+        yield return new WaitWhile(GetFadeOutAura);
 
-        this.GetComponent<SpriteRenderer>().enabled = false;
+        // Wait for FadeIn
+        yield return new WaitForSeconds(0.5f);
 
         auraGauge.SetActive(true);
         beforeAuraMessage.SetActive(false);
@@ -42,5 +74,10 @@ public class AuraPickup : MonoBehaviour
         inputReader.EnablePlayerInput();
         
         this.gameObject.SetActive(false);
+    }
+
+    private bool GetFadeOutAura()
+    {
+        return fadeOutAura;
     }
 }

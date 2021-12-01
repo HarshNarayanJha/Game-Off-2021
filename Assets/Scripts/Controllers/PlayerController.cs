@@ -239,7 +239,7 @@ public class PlayerController : MonoBehaviour
         scoreValue.Increment(points);
     }
 
-    private void ResetPosition()
+    public void ResetPosition()
     {
         transform.position = lastCheckpointPosition;
         // transform.position = lastGroundedPosition;

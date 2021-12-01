@@ -3967,7 +3967,7 @@ MonoBehaviour:
     collect em'' all.
 
     Though you can''t
-    collect them while covered under <color=blue>Aura</color>'
+    collect them while covered under <color=blue>Aura</color>...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4422fd8cf2666b84386346b5283ad2a7, type: 2}
   m_sharedMaterial: {fileID: 21040265067069690, guid: 4422fd8cf2666b84386346b5283ad2a7,
@@ -4562,7 +4562,7 @@ PrefabInstance:
     - target: {fileID: 7785071664801575274, guid: a7d85a2845ffe104cacc87920a015766,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0819092
+      value: -2.0742683
       objectReference: {fileID: 0}
     - target: {fileID: 7785071666050807978, guid: a7d85a2845ffe104cacc87920a015766,
         type: 3}
@@ -4627,7 +4627,7 @@ PrefabInstance:
     - target: {fileID: 7785071666314213676, guid: a7d85a2845ffe104cacc87920a015766,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0819092
+      value: -2.0742683
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7d85a2845ffe104cacc87920a015766, type: 3}

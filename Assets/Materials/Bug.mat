@@ -7,12 +7,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Aura
-  m_Shader: {fileID: -6465566751694194690, guid: 574fcf4af39bea74186b3a3dcbbd8872,
+  m_Name: Bug
+  m_Shader: {fileID: -6465566751694194690, guid: 42432446b98111f46956907d9ae4bc21,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -37,10 +37,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_23a3bcfb0a8a4f5982c97d9af37c5fa9: 7
-    - Vector1_8aceebb9db2d41ad94a29bdfa129b8a0: 1
-    - Vector1_9bf0b47388544c548fb0c06c8d60d14e: 6
-    - Vector1_aa34949bad3a40afad9926cbbe038dab: 1
+    - Vector1_9cad8023eefc4196b3deba1873e77f8d: 50
+    - _Fade: 1
     m_Colors:
-    - Color_1047cda6752a4aaeace07e6cdfb1b312: {r: 0, g: 44.508568, b: 72.65929, a: 1}
+    - Color_8c11cc4e21774b8da1346e289d397e19: {r: 0, g: 15.104691, b: 0.6413086, a: 0}
   m_BuildTextureStacks: []

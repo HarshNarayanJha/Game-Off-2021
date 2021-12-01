@@ -1205,9 +1205,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Go ahead through your mission of making your beloved Land,
+  m_text: 'Go through your <color=red>mission</color> of making your beloved Land,
 
-    "Bug-Free"'
+    "<color=green>Bug</color>-<color=black>Free</color>"'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4422fd8cf2666b84386346b5283ad2a7, type: 2}
   m_sharedMaterial: {fileID: 21040265067069690, guid: 4422fd8cf2666b84386346b5283ad2a7,
@@ -1598,8 +1598,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use the <color=black>Arrow Keys</color> (alternatively, WASD keys) to <color=blue>Move,
-    Jump and Crouch</color>. Try Jumping on the Platform ahead.
+  m_text: Use the <color=black>Arrow Keys</color> (alternatively, <color=black>WASD</color>
+    keys) to <color=blue>Move, Jump and Crouch</color>. Try <color=blue>Jumping</color>
+    on the <color=red>Platform</color> ahead.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4422fd8cf2666b84386346b5283ad2a7, type: 2}
   m_sharedMaterial: {fileID: 21040265067069690, guid: 4422fd8cf2666b84386346b5283ad2a7,
@@ -4118,8 +4119,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: These <color=blue>Portals</color> can teleport you to a new place, that
-    you may've never seen before. Enter Carefully
+  m_text: These <color=blue>Portals</color> can <color=red>teleport</color> you to
+    new places, that you may've never seen before. Enter Carefully.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4422fd8cf2666b84386346b5283ad2a7, type: 2}
   m_sharedMaterial: {fileID: 21040265067069690, guid: 4422fd8cf2666b84386346b5283ad2a7,
@@ -4391,7 +4392,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Use the <color=black>Z key</color> on your keyboard to control the <color=blue>Camera
-    Zoom</color> level. Keep it at you level of comfort
+    Zoom</color> level. Keep it at you level of comfort.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4422fd8cf2666b84386346b5283ad2a7, type: 2}
   m_sharedMaterial: {fileID: 21040265067069690, guid: 4422fd8cf2666b84386346b5283ad2a7,
@@ -6866,7 +6867,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: These are those Bugs
+  m_text: These are those <color=green>Bugs</color>.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4422fd8cf2666b84386346b5283ad2a7, type: 2}
   m_sharedMaterial: {fileID: 21040265067069690, guid: 4422fd8cf2666b84386346b5283ad2a7,
@@ -7468,7 +7469,7 @@ PrefabInstance:
     - target: {fileID: 7785071664801575274, guid: a7d85a2845ffe104cacc87920a015766,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0819092
+      value: -2.0742683
       objectReference: {fileID: 0}
     - target: {fileID: 7785071666050807978, guid: a7d85a2845ffe104cacc87920a015766,
         type: 3}
@@ -7533,7 +7534,7 @@ PrefabInstance:
     - target: {fileID: 7785071666314213676, guid: a7d85a2845ffe104cacc87920a015766,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0819092
+      value: -2.0742683
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7d85a2845ffe104cacc87920a015766, type: 3}
